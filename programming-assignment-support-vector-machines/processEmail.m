@@ -97,14 +97,14 @@ while ~isempty(email_contents)
     %       str2). It will return 1 only if the two strings are equivalent.
     %
 
+    vocab_size = size(vocabList)(1);
 
-
-
-
-
-
-
-
+    for id = 1:vocab_size
+        if strcmp(str, vocabList(id))
+            word_indices = [word_indices; id];
+            continue;
+        end
+    end
 
     % =============================================================
 
